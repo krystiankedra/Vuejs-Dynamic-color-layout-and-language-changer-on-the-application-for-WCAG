@@ -1,0 +1,21 @@
+{
+  "name": "vuetifyv2mnagement",
+  "version": "1.0.0",
+  "description": "My extraordinary Nuxt.js project",
+  "author": "KrystianKedra",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@mdi/font": "^4.7.95",
+    "file-loader": "^5.0.2",
+    "nuxt": "^2.11.0",
+    "url-loader": "^3.0.0",
+    "vuetify": "^2.2.4"
+  },
+  "devDependencies": {}
+}
