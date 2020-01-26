@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <v-layout>
-      <v-flex xs12 lg6>
+      <v-flex xs12>
         <async-employees-wrapper />
       </v-flex>
   </v-layout>
@@ -10,7 +10,7 @@
 
 
 <script>
-import { asyncEmployeesWrapper } from '~/Helpers/Components/AsyncComponents/AsyncComponents'
+import { asyncEmployeesWrapper } from '~/common/Components/AsyncComponents/AsyncComponents'
 export default {
   components: {
     asyncEmployeesWrapper

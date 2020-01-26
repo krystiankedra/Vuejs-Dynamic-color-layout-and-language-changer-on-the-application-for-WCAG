@@ -3,12 +3,12 @@
     <cardWrapper>
       <template #card-title>
         <span class="title primary-card-header-text--text">
-          {{ employee.firstname }} {{ employee.lastname }}
+          {{ $t('employees.employee.name') }}: {{ employee.firstname }} {{ employee.lastname }}
         </span>
       </template>
       <template #card-content>
         <span class="primary-card-text--text">
-          Age: {{ employee.age }}
+          {{ $t('employees.employee.age') }}: {{ employee.age }}
         </span>
       </template>
     </cardWrapper>
@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import { cardWrapper } from '~/Helpers/Components/LazyLoadingComponents/lazyLoadingComponents'
+import { cardWrapper } from '~/common/Components/LazyLoadingComponents/lazyLoadingComponents'
 export default {
   components: {
     cardWrapper,

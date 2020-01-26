@@ -2,7 +2,7 @@
   <pageWrapper>
     <template #page-title>
       <span class="title primary-card-header-text--text">
-        Employees List
+        {{ $t('employees.pageHeader') }}
       </span>
     </template>
     <template #page-content>
@@ -16,8 +16,8 @@
 </template>
 
 <script>
-import employeesManagement from '~/mixins/employeesManagement'
-import { empoloyee, pageWrapper } from '~/Helpers/Components/LazyLoadingComponents/lazyLoadingComponents'
+import employeesManagement from '~/mixins/EmployeesManagement/employeesManagement'
+import { empoloyee, pageWrapper } from '~/common/Components/LazyLoadingComponents/lazyLoadingComponents'
 export default {
   mixins: [employeesManagement],
   components: {

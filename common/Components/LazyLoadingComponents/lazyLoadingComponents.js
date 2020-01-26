@@ -2,6 +2,7 @@
 export const vuetifyThemes = () => import('~/components/Containers/VuetifyThemes/vuetifyThemes')
 export const employeesWrapper = () => import('~/components/Containers/EmployeesWrapper/employeesWrapper')
 export const empoloyee = () => import('~/components/Containers/EmployeesWrapper/Employee/employee')
+export const nuxtI18n = () => import('~/components/Containers/NuxtI18n/nuxtI18n')
 
 // Presentionals
 export const cardWrapper = () => import('~/components/Presentionals/CardWrapper/cardWrapper')

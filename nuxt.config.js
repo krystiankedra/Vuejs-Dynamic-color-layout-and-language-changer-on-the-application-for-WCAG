@@ -1,3 +1,4 @@
+import nuxti18nConfig from './modules/nuxt-i18n/nuxt-i18n-config'
 
 export default {
   mode: 'universal',
@@ -39,6 +40,7 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
+    nuxti18nConfig()
   ],
   /*
   ** Build configuration

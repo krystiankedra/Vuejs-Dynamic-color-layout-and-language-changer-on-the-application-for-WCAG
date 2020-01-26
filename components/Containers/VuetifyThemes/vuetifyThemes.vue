@@ -9,8 +9,8 @@
 </template>
 
 <script>
-import vuetifyThemesManagement from '~/mixins/vuetifyThemesManagement'
-import { comboboxEmitter } from '~/Helpers/Components/LazyLoadingComponents/lazyLoadingComponents'
+import vuetifyThemesManagement from '~/mixins/VuetifyThemesManagement/vuetifyThemesManagement'
+import { comboboxEmitter } from '~/common/Components/LazyLoadingComponents/lazyLoadingComponents'
 export default {
   components: {
     comboboxEmitter
