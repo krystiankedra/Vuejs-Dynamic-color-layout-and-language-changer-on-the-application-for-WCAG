@@ -2,7 +2,7 @@
   <v-container>
     <combobox-emitter :item.sync="selectedTheme" :items="themeVariants">
       <template #field-label>
-        Select theme
+        {{ $t('otherWords.selectTheme') }}
       </template>
     </combobox-emitter>
   </v-container>

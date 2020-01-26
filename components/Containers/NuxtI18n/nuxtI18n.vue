@@ -3,7 +3,7 @@
     <nuxt-link v-show="false" id="localePathSwitcher" :to="switchLocalePath(updateLocale.key)" />
     <combobox-emitter :items="locales" :item.sync="updateLocale">
       <template #field-label>
-        Select locale
+        {{ $t('otherWords.selectLanguage') }}
       </template>
     </combobox-emitter>
   </v-container>
