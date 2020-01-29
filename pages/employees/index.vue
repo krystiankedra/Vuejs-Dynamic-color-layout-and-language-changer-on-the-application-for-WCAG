@@ -10,7 +10,7 @@
 
 
 <script>
-import { asyncEmployeesWrapper } from '~/common/Components/AsyncComponents/AsyncComponents'
+import { asyncEmployeesWrapper } from '~/common/Components/AsyncComponents/asyncComponents'
 export default {
   components: {
     asyncEmployeesWrapper
