@@ -1,27 +1,29 @@
 <template>
   <v-app>
     <client-only>
-      <v-container>
-        <v-layout row wrap>
-          <v-flex xs12 md6 px-4>
-            <nuxtI18n />
-          </v-flex>
-          <v-flex xs12 md6 px-4>
-            <vuetify-themes />
-          </v-flex>
-        </v-layout>
-      </v-container>
-      <nuxt />
+      <navigation-wrapper />
+      <v-content>
+        <v-container fluid>
+          <axios-information-wrapper />
+          <application-management-wrapper />
+          <nuxt />
+        </v-container>
+      </v-content>
     </client-only>
   </v-app>
 </template>
 
 <script>
-import { vuetifyThemes, nuxtI18n } from '~/common/Components/LazyLoadingComponents/lazyLoadingComponents'
+import {
+  applicationManagementWrapper,
+  axiosInformationWrapper,
+  navigationWrapper
+} from '~/commons/Components/LazyLoadingComponents/lazyLoadingComponents'
 export default {
   components: {
-    vuetifyThemes,
-    nuxtI18n
+    applicationManagementWrapper,
+    axiosInformationWrapper,
+    navigationWrapper
   }
 }
 </script>

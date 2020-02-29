@@ -29,7 +29,8 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    '@plugins/vuetify.client'
+    '@plugins/vuetify.client',
+    '@plugins/axios.client'
   ],
   /*
   ** Nuxt.js dev-modules
@@ -40,6 +41,7 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
+    '@nuxtjs/axios',
     nuxti18nConfig()
   ],
   /*
@@ -51,5 +53,14 @@ export default {
     */
     extend (config, ctx) {
     }
+  },
+
+  generate: {
+    dir: 'public'
+  },
+
+  env: {
+    baseURL: 'https://jsonplaceholder.typicode.com/'
   }
+
 }
