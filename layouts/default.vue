@@ -1,6 +1,6 @@
 <template>
-  <v-app>
-    <client-only>
+  <client-only>
+    <v-app>
       <navigation-wrapper />
       <v-content>
         <v-container fluid>
@@ -9,8 +9,8 @@
           <nuxt />
         </v-container>
       </v-content>
-    </client-only>
-  </v-app>
+    </v-app>
+  </client-only>
 </template>
 
 <script>

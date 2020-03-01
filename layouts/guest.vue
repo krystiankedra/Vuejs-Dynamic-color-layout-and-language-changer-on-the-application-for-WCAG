@@ -1,14 +1,14 @@
 <template>
-  <v-app>
-    <client-only>
+  <client-only>
+    <v-app>
       <v-content>
         <v-container fluid>
           <application-management-wrapper />
           <nuxt />
         </v-container>
       </v-content>
-    </client-only>
-  </v-app>
+    </v-app>
+  </client-only>
 </template>
 
 
