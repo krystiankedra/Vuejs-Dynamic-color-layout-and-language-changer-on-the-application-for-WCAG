@@ -25,7 +25,8 @@
 <script>
 import { cardWrapper } from '~/commons/Components/LazyLoadingComponents/lazyLoadingComponents'
 import { SET_USER_AUTH } from '~/store/auth/mutationTypes'
-import { mapGetters } from 'vuex'
+import { mapGetters, mapMutations } from 'vuex'
+
 export default {
   components: {
     cardWrapper
@@ -39,11 +40,14 @@ export default {
     }
   },
   methods: {
+    ...mapMutations({
+      'setUserAuth': SET_USER_AUTH
+    }),
     navigateToAfterLogType() {
       this.isAuth ? this.$router.push('/posts') : this.$router.push('/')
     },
     changeUserAuthState() {
-      this.$store.commit(SET_USER_AUTH, !this.isAuth)
+      this.setUserAuth(!this.isAuth)
     },
     login() {
       this.changeUserAuthState()

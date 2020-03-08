@@ -1,27 +1,28 @@
-export const getPosts = async (payload) => {
+export const fetchPosts = async (payload) => {
     const { $api } = payload
     const response = await $api.get(`posts`)
     return response.data
 }
 
-export const getCommnetsByPostId = async (payload) => {
-  const { $api, post } = payload
-  const response = await $api.get(`comments?postId=${post.id}`)
-  return response.data
-}
-
-export const getUserById = async (payload) => {
+export const fetchComments = async (payload) => {
   const { $api, id } = payload
-  const response = await $api.get(`users/${id}`)
+  const response = await $api.get(`comments?postId=${id}`)
   return response.data
 }
 
-export async function *mergePostWithCommentsAndAuthors(payload) {
-  const { $api, posts } = payload
+export const fetchUser = async (payload) => {
+  const { $api, userId } = payload
+  const response = await $api.get(`users/${userId}`)
+  return response.data
+}
+
+export async function *fetchCommentsWithAuthorForPosts(payload) {
+  const { $api, posts, callback } = payload
   for (const post of posts) {
+    const { id, userId } = post
     const [ author, comments ] = await Promise.all([
-      getUserById({ $api, id: post.userId }),
-      getCommnetsByPostId({ $api, post })
+      (callback && callback({ post })) ?? fetchUser({ $api, userId }),
+      fetchComments({ $api, id })
     ])
     yield {
       ...post,
